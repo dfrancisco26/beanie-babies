@@ -18,7 +18,7 @@ function App() {
     }
 
     fetch();
-  }, [page]); // what can you do with this array to trigger a fetch every time the page changes?
+  }, [page, setPage]); // what can you do with this array to trigger a fetch every time the page changes?
 
   return (
     <>
