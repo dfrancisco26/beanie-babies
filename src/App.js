@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,6 +8,8 @@ import BeaniesPage from './BeaniesPage';
 import BeanieDetail from './BeanieDetail';
 
 export default function App() {
+
+
   return (
     <Router>
       <div className='App'>
@@ -16,7 +18,7 @@ export default function App() {
           <Route exact path="/">
             <BeaniesPage />
           </Route>
-          <Route exact path="/beanies/:id"> 
+          <Route exact path="BeanieDetail/:id"> 
             <BeanieDetail />
             {/* this route should point to a particular beanie baby by id and render that specific BeanieDetail page */}
           </Route>

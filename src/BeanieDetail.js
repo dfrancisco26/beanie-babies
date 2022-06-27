@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { getSingleBeanie } from './services/fetch-utils';
 
-export default function BeanieDetail() {
+export default function BeanieDetail(...beanieBaby) {
+  const [beanie, setBeanie] = useState();
+  const beanieId = useParams();
   // you'll need to track the current beanieBaby in state
   // you'll need to get the route param using the appropriate react router hook
 
@@ -19,7 +21,7 @@ export default function BeanieDetail() {
     <>
       {/* Feel free to uncomment and use the below code--but you'll need to figure out how to keep it from blowing up on load */}
       
-      {/* <Link to='/'>Home</Link>
+      <Link to='/'>Home</Link>
       <div className='beanie-detail' onClick={handleBeanieClick}>
         <div className='beanie-data'>
           <p>{beanieBaby.animal}</p>
@@ -38,7 +40,7 @@ export default function BeanieDetail() {
           <p>Swing Tag Generation: {beanieBaby.swingTagGeneration}</p>
           <p>Tush Tag Generation: {beanieBaby.tushTagGeneration}</p>
         </div>
-      </div>   */}
+      </div>   */
     </>
   );
 }
