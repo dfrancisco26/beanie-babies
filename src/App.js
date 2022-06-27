@@ -19,7 +19,7 @@ export default function App() {
           <Route exact path="/">
             <BeaniesPage />
           </Route>
-          <Route exact path="beanieDetail/:id"> 
+          <Route exact path="/beanieDetail/:id"> 
             <BeanieDetail />
             {/* this route should point to a particular beanie baby by id and render that specific BeanieDetail page */}
           </Route>
