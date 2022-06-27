@@ -47,6 +47,7 @@ export default function BeanieDetail() {
           <p>Style Number: {beanieBaby.styleNumber}</p>
           <p>Swing Tag Generation: {beanieBaby.swingTagGeneration}</p>
           <p>Tush Tag Generation: {beanieBaby.tushTagGeneration}</p>
+          <a href={beanieBaby.link} target="_blank" rel="noreferrer">Go to encyclopedia entry</a>
         </div>
       </div> 
     </>
