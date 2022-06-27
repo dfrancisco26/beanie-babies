@@ -1,8 +1,15 @@
-import BeanieBaby from './BeanieBaby.js';
+import BeanieBaby from './BeanieBaby';
 
 export default function BeaniesList({ beanieBabies }) {
   return (
-    <div className='beanies'>
-      {/* render out the beanie babies as a list */}
-    </div>);
+    <div className='beanies-list'>
+      {
+        beanieBabies.map((beanieBaby, i) =>
+        {
+          return <div className='beanie' key={beanieBaby.title + i + beanieBaby.id}>
+            <BeanieBaby beanieBaby={beanieBaby} name={beanieBaby.name} image={beanieBaby.image} />
+          </div>;
+        })}
+    </div>
+  );
 }
